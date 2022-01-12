@@ -1,5 +1,4 @@
-<# CREAR NOMBRE DE ARCHIVOS BASADOS EN EL TIMESTAMP..
-
+#CREAR NOMBRE DE ARCHIVOS BASADOS EN EL TIMESTAMP..
 Function GetFileName([ref]$fileName)
 {
  $invalidChars = [io.path]::GetInvalidFileNamechars() 
@@ -11,4 +10,3 @@ $fileName = $null
 GetFileName([ref]$fileName)
 new-item -path c:\ -name $filename -itemtype file
 
-#>
