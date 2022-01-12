@@ -1,3 +1,4 @@
+$host.ui.RawUI.WindowTitle = “Añadir un nombre a un archivo de texto desde PShell”
 #Ejemplo
 # powershell-add-file-name-to-text-file
 # https://stackoverflow.com/questions/29149037/powershell-add-file-name-to-text-file
