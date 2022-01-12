@@ -9,6 +9,6 @@ Function GetFileName([ref]$fileName)
 
 $fileName = $null
 GetFileName([ref]$fileName)
-new-item -path c:\fso -name $filename -itemtype file
+new-item -path c:\ -name $filename -itemtype file
 
 #>

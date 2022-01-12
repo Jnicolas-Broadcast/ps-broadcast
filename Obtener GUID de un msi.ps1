@@ -1,7 +1,7 @@
 $host.ui.RawUI.WindowTitle = “Obtener GUID de un msi”
 
 # Si yo quisiera copiar a portapapeles la salida de la variable...seria..
-#$OutputVariable1 = (cmd.exe /c hostname) | Out-String | clip
+$OutputVariable1 = (cmd.exe /c hostname) | Out-String | clip
 
 <# ---------------------------------------------------------------
 Extraer GUID de Msi instalada.. reemplazando algunas lineas.
@@ -25,4 +25,4 @@ dir *.txt | ForEach {
 #>
 
 GetFileName([ref]$OutputVariable1)
-new-item -path c:\fso -name $OutputVariable1 -itemtype file
+new-item -path c:\ -name $OutputVariable1 -itemtype file

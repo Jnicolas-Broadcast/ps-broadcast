@@ -1,14 +1,13 @@
-
 $OutputVariable1 = (cmd.exe /c hostname) #| Out-String | clip
-
+$fileName = $null
 Function GetFileName([ref]$fileName)
 {
- $invalidChars = [io.path]::GetInvalidFileNamechars() 
- $date = Get-Date -format s
- $fileName.value = ($date.ToString() -replace "[$invalidChars]","-") + ".txt"
+ $fileName.value = (OutputVariable1 -replace " ") + ".txt"
 }
 
-
-
 New-Item -path c:\ -name  $OutputVariable1 -ItemType File
-Add-Content "C:\files\open\file.txt" "The second sentence in our file."
+$OutputVariable2 = (get-wmiobject Win32_Product | Sort-Object -Property Name |Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize)
+
+Add-Content "$OutputVariable2"
+
+
