@@ -26,3 +26,5 @@ dir *.txt | ForEach {
 
 GetFileName([ref]$OutputVariable1)
 new-item -path c:\ -name $OutputVariable1 -itemtype file
+
+Add-Content -Value $OutputVariable2 -path c:\ -name $OutputVariable1 .\"OutputVariable1".txt
