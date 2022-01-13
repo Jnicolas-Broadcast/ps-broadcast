@@ -8,7 +8,6 @@ Extraer GUID de Msi instalada.. reemplazando algunas lineas.
 OutputVariable y clip, tomamos desde el portapapeles la salida del comando "hostname.exe"#>
 
 <# y esta tercera linea (abajo)arroja el GUID, funciona correctamente.
-get-wmiobject Win32_Product | Sort-Object -Property Name |Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize
 #>
 
 $OutputVariable2 = (get-wmiobject Win32_Product | Sort-Object -Property Name |Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize)
