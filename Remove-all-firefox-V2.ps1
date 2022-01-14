@@ -6,3 +6,9 @@
     https://superuser.com/questions/234104/uninstalling-programs-silently-via-cmd/234107
 #>
 (Get-WmiObject -Query "SELECT * FROM Win32_Product WHERE Name like '%Partial Name%'").uninstall()
+
+# también puede intentarse...
+<#
+    wmic product where name="_my_product_name" call uninstall
+
+#>
