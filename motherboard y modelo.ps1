@@ -10,3 +10,5 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 #>
 new-item -force -path c:\ -name "modelo-mb" -itemtype file
 Add-Content -Path "c:\modelo-mb.txt" -Value (cmd /c "wmic baseboard get product, Manufacturer")
+Add-Content -Path "c:\modelo-mb.txt" -Value (cmd /c "hostname")
+Add-Content -Path "c:\modelo-mb.txt" -Value (cmd /c "ECHO --------------------------------------------------------------------")
