@@ -17,7 +17,7 @@ $credential = Get-Credential 'uepccba.local\jcabral'
 $credential.Password | ConvertFrom-SecureString | Set-Content c:\password.txt
 #>
 
-#new-item -force -path "\\10.1.3.171\c$\" -name "modelo-mb.txt" -itemtype file
-Add-Content -Path "\\10.1.3.171\c$\modelo-mb.txt" -Value (cmd /c "wmic baseboard get product, Manufacturer")
-Add-Content -Path "\\10.1.3.171\c$\modelo-mb.txt" -Value (cmd /c "hostname")
-Add-Content -Path "\\10.1.3.171\c$\modelo-mb.txt" -Value (cmd /c "ECHO --------------------------------------------------------------------")
+new-item -force -path "C:\" -name "modelo-mb.txt" -itemtype file
+Add-Content -Path "C:\modelo-mb.txt" -Value (cmd /c "wmic baseboard get product, Manufacturer")
+Add-Content -Path "C:\modelo-mb.txt" -Value (cmd /c "hostname")
+Add-Content -Path "C:\modelo-mb.txt" -Value (cmd /c "ECHO --------------------------------------------------------------------")
